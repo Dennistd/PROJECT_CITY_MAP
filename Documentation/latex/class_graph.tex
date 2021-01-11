@@ -1,0 +1,258 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+
+
+The main class for the graph of crossroads.  
+
+
+
+
+{\ttfamily \#include $<$Graph.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph}} ()
+\item 
+\mbox{\hyperlink{class_graph_a7b14c9bc0b5fbf50165aaf92f4aeef1d}{Graph}} (int n)
+\item 
+int \mbox{\hyperlink{class_graph_abe53f5d640fd633e100aa77c6e714f41}{get\+Size}} () const
+\item 
+int \mbox{\hyperlink{class_graph_a551189cda9e9409b7bd95d18f4450e7a}{add\+Vertex}} ()
+\item 
+int \mbox{\hyperlink{class_graph_ae15b22e2b3cab228696dde960e0cb92f}{add\+Vertex}} (const std\+::string \&name)
+\item 
+bool \mbox{\hyperlink{class_graph_a2b6f5072ebcb54b0fa31e91d8612bb4c}{exists\+Vertex}} (std\+::string vertex) const
+\item 
+int \mbox{\hyperlink{class_graph_a6602354ea7dab345f6e62d7e7f54040b}{get\+Vert\+Index}} (std\+::string name) const
+\item 
+void \mbox{\hyperlink{class_graph_a46ac1827ea545aa493250cf39df1e6e7}{add\+Edge}} (std\+::string start, std\+::string end, unsigned cost=1)
+\item 
+void \mbox{\hyperlink{class_graph_afba3fec94efedea2b01c7c4840a2595c}{remove\+Edge}} (std\+::string start, std\+::string end)
+\item 
+void \mbox{\hyperlink{class_graph_a69d66b927bda903b3c90601fdd946c58}{get\+Successors}} (std\+::string vertex, std\+::vector$<$ std\+::pair$<$ std\+::string, unsigned $>$$>$ \&vertex\+Adj) const
+\item 
+std\+::vector$<$ std\+::pair$<$ std\+::string, unsigned $>$ $>$ \mbox{\hyperlink{class_graph_af2d2a8452588df32461dbd5d8b3bdfdb}{get\+Successors}} (std\+::string vertex)
+\item 
+int \mbox{\hyperlink{class_graph_ac6dcb77084447618b65514ce25bd7d2a}{get\+Vertex\+Count}} () const
+\item 
+\mbox{\hyperlink{class_list_elem}{List\+Elem}} \& \mbox{\hyperlink{class_graph_aaa9ffa5f97496f12845aec0128619ff6}{get\+Vert}} (const std\+::string \&name)
+\item 
+const \mbox{\hyperlink{class_list_elem}{List\+Elem}} \& \mbox{\hyperlink{class_graph_aeb55e637d474a79a6090f5a712d74d62}{get\+Vert}} (const std\+::string \&name) const
+\item 
+\mbox{\hyperlink{class_list_elem}{List\+Elem}} \& \mbox{\hyperlink{class_graph_aefce859bb266d32831605af40e400c05}{get\+Vert}} (int index)
+\item 
+const \mbox{\hyperlink{class_list_elem}{List\+Elem}} \& \mbox{\hyperlink{class_graph_a243d27e68fcac92f6421a28f4e6ee115}{get\+Vert}} (int index) const
+\item 
+bool \mbox{\hyperlink{class_graph_a9947a6cdf45ae0335ab620090e59ebd9}{has\+Cycle}} (std\+::string start, std\+::vector$<$ bool $>$ \&visited, std\+::vector$<$ bool $>$ \&recstack) const
+\item 
+void \mbox{\hyperlink{class_graph_a1c983f91cf109de6173ac89aa12429db}{print\+Path}} (std\+::vector$<$ int $>$ prev, int start, int end, std\+::vector$<$ std\+::string $>$ \&path) const
+\item 
+int \mbox{\hyperlink{class_graph_afa02d1d2bffe5c46ba050d9d87577ad8}{out\+Degrees}} (int vert) const
+\item 
+int \mbox{\hyperlink{class_graph_a064eb55f0a86ebdc16f1e8efeae4792a}{out\+Degrees}} (std\+::string str) const
+\item 
+int \mbox{\hyperlink{class_graph_aa2511b349dd8f889befb6e92cdfe0f04}{in\+Degrees}} (int vert) const
+\item 
+int \mbox{\hyperlink{class_graph_a0ce631a487f769279881ee8bda0d761c}{in\+Degrees}} (std\+::string str) const
+\item 
+bool \mbox{\hyperlink{class_graph_a2b63f2ae8748ab25d875b629e9487b64}{all\+Same\+Degrees}} () const
+\item 
+bool \mbox{\hyperlink{class_graph_a4ba2b1aa668ad518364cc4178d18ca67}{has2\+Diff}} ()
+\item 
+\mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_graph_abdaf0cb08811d4b30f4c85f632e0e181}{get\+Transpose}} ()
+\item 
+bool \mbox{\hyperlink{class_graph_a439f8a1f6c639c8b18252f031aaf053e}{strongly\+Connected}} ()
+\item 
+void \mbox{\hyperlink{class_graph_a5c117e2b8ee9f53c5bc7dab272c98591}{visited\+BFS}} (int index, std\+::vector$<$ bool $>$ \&visited)
+\item 
+bool \mbox{\hyperlink{class_graph_a8f3d0c9b7f54ce7714e7d7a0566c826d}{has\+Eulerian\+Path}} (std\+::string name) const
+\item 
+void \mbox{\hyperlink{class_graph_a615b856aadf8eacf94a0423ac5e5a5de}{visited\+DFS}} (std\+::string name, std\+::vector$<$ bool $>$ \&visited) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main class for the graph of crossroads. 
+
+Represents an adjacency list ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}\label{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_graph_a7b14c9bc0b5fbf50165aaf92f4aeef1d}\label{class_graph_a7b14c9bc0b5fbf50165aaf92f4aeef1d}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_a46ac1827ea545aa493250cf39df1e6e7}\label{class_graph_a46ac1827ea545aa493250cf39df1e6e7}} 
+\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{std\+::string}]{start,  }\item[{std\+::string}]{end,  }\item[{unsigned}]{cost = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_graph_a551189cda9e9409b7bd95d18f4450e7a}\label{class_graph_a551189cda9e9409b7bd95d18f4450e7a}} 
+\index{Graph@{Graph}!addVertex@{addVertex}}
+\index{addVertex@{addVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addVertex()}{addVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Graph\+::add\+Vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_graph_ae15b22e2b3cab228696dde960e0cb92f}\label{class_graph_ae15b22e2b3cab228696dde960e0cb92f}} 
+\index{Graph@{Graph}!addVertex@{addVertex}}
+\index{addVertex@{addVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addVertex()}{addVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Graph\+::add\+Vertex (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_graph_a2b63f2ae8748ab25d875b629e9487b64}\label{class_graph_a2b63f2ae8748ab25d875b629e9487b64}} 
+\index{Graph@{Graph}!allSameDegrees@{allSameDegrees}}
+\index{allSameDegrees@{allSameDegrees}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{allSameDegrees()}{allSameDegrees()}}
+{\footnotesize\ttfamily bool Graph\+::all\+Same\+Degrees (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_graph_a2b6f5072ebcb54b0fa31e91d8612bb4c}\label{class_graph_a2b6f5072ebcb54b0fa31e91d8612bb4c}} 
+\index{Graph@{Graph}!existsVertex@{existsVertex}}
+\index{existsVertex@{existsVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{existsVertex()}{existsVertex()}}
+{\footnotesize\ttfamily bool Graph\+::exists\+Vertex (\begin{DoxyParamCaption}\item[{std\+::string}]{vertex }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_graph_abe53f5d640fd633e100aa77c6e714f41}\label{class_graph_abe53f5d640fd633e100aa77c6e714f41}} 
+\index{Graph@{Graph}!getSize@{getSize}}
+\index{getSize@{getSize}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Graph\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_graph_af2d2a8452588df32461dbd5d8b3bdfdb}\label{class_graph_af2d2a8452588df32461dbd5d8b3bdfdb}} 
+\index{Graph@{Graph}!getSuccessors@{getSuccessors}}
+\index{getSuccessors@{getSuccessors}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getSuccessors()}{getSuccessors()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ std\+::string, unsigned $>$ $>$ Graph\+::get\+Successors (\begin{DoxyParamCaption}\item[{std\+::string}]{vertex }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_graph_a69d66b927bda903b3c90601fdd946c58}\label{class_graph_a69d66b927bda903b3c90601fdd946c58}} 
+\index{Graph@{Graph}!getSuccessors@{getSuccessors}}
+\index{getSuccessors@{getSuccessors}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getSuccessors()}{getSuccessors()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Graph\+::get\+Successors (\begin{DoxyParamCaption}\item[{std\+::string}]{vertex,  }\item[{std\+::vector$<$ std\+::pair$<$ std\+::string, unsigned $>$$>$ \&}]{vertex\+Adj }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_graph_abdaf0cb08811d4b30f4c85f632e0e181}\label{class_graph_abdaf0cb08811d4b30f4c85f632e0e181}} 
+\index{Graph@{Graph}!getTranspose@{getTranspose}}
+\index{getTranspose@{getTranspose}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getTranspose()}{getTranspose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}} Graph\+::get\+Transpose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_graph_aaa9ffa5f97496f12845aec0128619ff6}\label{class_graph_aaa9ffa5f97496f12845aec0128619ff6}} 
+\index{Graph@{Graph}!getVert@{getVert}}
+\index{getVert@{getVert}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getVert()}{getVert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_list_elem}{List\+Elem}} \& Graph\+::get\+Vert (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_graph_aeb55e637d474a79a6090f5a712d74d62}\label{class_graph_aeb55e637d474a79a6090f5a712d74d62}} 
+\index{Graph@{Graph}!getVert@{getVert}}
+\index{getVert@{getVert}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getVert()}{getVert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_list_elem}{List\+Elem}} \& Graph\+::get\+Vert (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_graph_aefce859bb266d32831605af40e400c05}\label{class_graph_aefce859bb266d32831605af40e400c05}} 
+\index{Graph@{Graph}!getVert@{getVert}}
+\index{getVert@{getVert}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getVert()}{getVert()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_list_elem}{List\+Elem}} \& Graph\+::get\+Vert (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_graph_a243d27e68fcac92f6421a28f4e6ee115}\label{class_graph_a243d27e68fcac92f6421a28f4e6ee115}} 
+\index{Graph@{Graph}!getVert@{getVert}}
+\index{getVert@{getVert}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getVert()}{getVert()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_list_elem}{List\+Elem}} \& Graph\+::get\+Vert (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_graph_ac6dcb77084447618b65514ce25bd7d2a}\label{class_graph_ac6dcb77084447618b65514ce25bd7d2a}} 
+\index{Graph@{Graph}!getVertexCount@{getVertexCount}}
+\index{getVertexCount@{getVertexCount}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getVertexCount()}{getVertexCount()}}
+{\footnotesize\ttfamily int Graph\+::get\+Vertex\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_graph_a6602354ea7dab345f6e62d7e7f54040b}\label{class_graph_a6602354ea7dab345f6e62d7e7f54040b}} 
+\index{Graph@{Graph}!getVertIndex@{getVertIndex}}
+\index{getVertIndex@{getVertIndex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getVertIndex()}{getVertIndex()}}
+{\footnotesize\ttfamily int Graph\+::get\+Vert\+Index (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_graph_a4ba2b1aa668ad518364cc4178d18ca67}\label{class_graph_a4ba2b1aa668ad518364cc4178d18ca67}} 
+\index{Graph@{Graph}!has2Diff@{has2Diff}}
+\index{has2Diff@{has2Diff}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{has2Diff()}{has2Diff()}}
+{\footnotesize\ttfamily bool Graph\+::has2\+Diff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_graph_a9947a6cdf45ae0335ab620090e59ebd9}\label{class_graph_a9947a6cdf45ae0335ab620090e59ebd9}} 
+\index{Graph@{Graph}!hasCycle@{hasCycle}}
+\index{hasCycle@{hasCycle}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{hasCycle()}{hasCycle()}}
+{\footnotesize\ttfamily bool Graph\+::has\+Cycle (\begin{DoxyParamCaption}\item[{std\+::string}]{start,  }\item[{std\+::vector$<$ bool $>$ \&}]{visited,  }\item[{std\+::vector$<$ bool $>$ \&}]{recstack }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_graph_a8f3d0c9b7f54ce7714e7d7a0566c826d}\label{class_graph_a8f3d0c9b7f54ce7714e7d7a0566c826d}} 
+\index{Graph@{Graph}!hasEulerianPath@{hasEulerianPath}}
+\index{hasEulerianPath@{hasEulerianPath}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{hasEulerianPath()}{hasEulerianPath()}}
+{\footnotesize\ttfamily bool Graph\+::has\+Eulerian\+Path (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_graph_aa2511b349dd8f889befb6e92cdfe0f04}\label{class_graph_aa2511b349dd8f889befb6e92cdfe0f04}} 
+\index{Graph@{Graph}!inDegrees@{inDegrees}}
+\index{inDegrees@{inDegrees}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{inDegrees()}{inDegrees()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Graph\+::in\+Degrees (\begin{DoxyParamCaption}\item[{int}]{vert }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_graph_a0ce631a487f769279881ee8bda0d761c}\label{class_graph_a0ce631a487f769279881ee8bda0d761c}} 
+\index{Graph@{Graph}!inDegrees@{inDegrees}}
+\index{inDegrees@{inDegrees}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{inDegrees()}{inDegrees()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Graph\+::in\+Degrees (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_graph_afa02d1d2bffe5c46ba050d9d87577ad8}\label{class_graph_afa02d1d2bffe5c46ba050d9d87577ad8}} 
+\index{Graph@{Graph}!outDegrees@{outDegrees}}
+\index{outDegrees@{outDegrees}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{outDegrees()}{outDegrees()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Graph\+::out\+Degrees (\begin{DoxyParamCaption}\item[{int}]{vert }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_graph_a064eb55f0a86ebdc16f1e8efeae4792a}\label{class_graph_a064eb55f0a86ebdc16f1e8efeae4792a}} 
+\index{Graph@{Graph}!outDegrees@{outDegrees}}
+\index{outDegrees@{outDegrees}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{outDegrees()}{outDegrees()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Graph\+::out\+Degrees (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_graph_a1c983f91cf109de6173ac89aa12429db}\label{class_graph_a1c983f91cf109de6173ac89aa12429db}} 
+\index{Graph@{Graph}!printPath@{printPath}}
+\index{printPath@{printPath}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{printPath()}{printPath()}}
+{\footnotesize\ttfamily void Graph\+::print\+Path (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{prev,  }\item[{int}]{start,  }\item[{int}]{end,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{path }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_graph_afba3fec94efedea2b01c7c4840a2595c}\label{class_graph_afba3fec94efedea2b01c7c4840a2595c}} 
+\index{Graph@{Graph}!removeEdge@{removeEdge}}
+\index{removeEdge@{removeEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{removeEdge()}{removeEdge()}}
+{\footnotesize\ttfamily void Graph\+::remove\+Edge (\begin{DoxyParamCaption}\item[{std\+::string}]{start,  }\item[{std\+::string}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_graph_a439f8a1f6c639c8b18252f031aaf053e}\label{class_graph_a439f8a1f6c639c8b18252f031aaf053e}} 
+\index{Graph@{Graph}!stronglyConnected@{stronglyConnected}}
+\index{stronglyConnected@{stronglyConnected}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{stronglyConnected()}{stronglyConnected()}}
+{\footnotesize\ttfamily bool Graph\+::strongly\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_graph_a5c117e2b8ee9f53c5bc7dab272c98591}\label{class_graph_a5c117e2b8ee9f53c5bc7dab272c98591}} 
+\index{Graph@{Graph}!visitedBFS@{visitedBFS}}
+\index{visitedBFS@{visitedBFS}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{visitedBFS()}{visitedBFS()}}
+{\footnotesize\ttfamily void Graph\+::visited\+BFS (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{std\+::vector$<$ bool $>$ \&}]{visited }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_graph_a615b856aadf8eacf94a0423ac5e5a5de}\label{class_graph_a615b856aadf8eacf94a0423ac5e5a5de}} 
+\index{Graph@{Graph}!visitedDFS@{visitedDFS}}
+\index{visitedDFS@{visitedDFS}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{visitedDFS()}{visitedDFS()}}
+{\footnotesize\ttfamily void Graph\+::visited\+DFS (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::vector$<$ bool $>$ \&}]{visited }\end{DoxyParamCaption}) const}
+
